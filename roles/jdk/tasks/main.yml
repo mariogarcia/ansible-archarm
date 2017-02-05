@@ -1,0 +1,6 @@
+---
+- name: install Open JDK
+  pacman:
+    name: jdk{{ openjdk_version }}-openjdk
+    state: present
+  become: true
