@@ -1,6 +1,6 @@
 ---
 - name: start_postgres
+  become: true
   service:
     name: postgresql
     state: started
-  become: true

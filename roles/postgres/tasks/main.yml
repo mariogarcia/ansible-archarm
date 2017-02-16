@@ -1,27 +1,27 @@
 ---
 - name: install postgreSQL
+  become: true
   pacman:
     name: postgresql
     state: present
-  become: true
 
 - name: create data directory
+  become: true
   file:
     path: /var/lib/postgres/data
     state: directory
     owner: postgres
     group: postgres
-  become: true
 
 - name: initialize database
-  shell: initdb -E UTF8 -D '/var/lib/postgres/data'
   become: true
+  shell: initdb -E UTF8 -D '/var/lib/postgres/data'
   become_user: postgres
   notify:
     - start_postgres
 
 - name: copy database configuration files
-  template:
-    src: ../templates/pg_hba.conf
-    dest: /var/lib/postgres/data/
   become: true
+  template:
+    src: pg_hba.conf
+    dest: /var/lib/postgres/data/
