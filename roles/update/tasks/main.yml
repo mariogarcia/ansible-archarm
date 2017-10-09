@@ -1,4 +1,5 @@
 ---
 - pacman:
+    force: yes
     update_cache: yes
     upgrade: yes
