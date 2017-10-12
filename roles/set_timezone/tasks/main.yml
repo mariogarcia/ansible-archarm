@@ -1,0 +1,3 @@
+- copy:
+    src: /usr/share/zoneinfo/Europe/Madrid
+    dest: /etc/localtime

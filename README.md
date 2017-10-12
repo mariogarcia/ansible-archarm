@@ -7,3 +7,4 @@ to [ArchlinuxARM](https://archlinuxarm.org/):
 - openjdk-8: installs openjdk-7
 - postgresql: installs PostgreSQL database 9.6
 - update: updates ArchlinuxARM system
+- set_timezone: sets all machines to Europe/Madrid timezone
